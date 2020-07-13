@@ -23,7 +23,7 @@ const App = ({movies, moviesStatus, searchForMovies}: AppProps) => {
     <div className="App">
       <SearchInput
         className="search-input"
-        placeholder="Enter username"
+        placeholder="Enter movie title"
         onChange={(event: React.ChangeEvent<HTMLInputElement>) => setSearchInputText(event.currentTarget.value)}
         type="text"
       />

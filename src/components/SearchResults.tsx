@@ -10,7 +10,7 @@ const SearchResults = ({movies}: SearchResultsProps) => {
   return (
     <div>
       {movies?.map((movie) =>
-        <MovieCard key={movie.imdbID} movie={movie}></MovieCard>
+        <MovieCard key={movie.imdbID} movie={movie} />
         // <li key={user.id}><Dropdown username={user.name} index={index} userID={user.id} /></li>
       )}
 
