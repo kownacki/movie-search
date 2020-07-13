@@ -1,19 +1,24 @@
 import * as React from 'react';
 import {useState} from 'react';
+import {connect} from 'react-redux';
+import _ from 'lodash/fp';
 import '../index.css';
-import * as OMDb from '../OMDb';
 import SearchInput from './SearchInput';
 import SearchResults from './SearchResults';
 import SearchButton from './SearchButton';
+import {searchForMovies} from '../redux/actions';
+import * as types from '../types';
+import * as reduxTypes from '../redux/types';
 
-const handleClick = async (searchInputText: string) => {
-  const result = await OMDb.search(encodeURIComponent(searchInputText));
-  console.log(result)
-};
+interface AppProps {
+  moviesStatus?: reduxTypes.MoviesStatus,
+  movies?: types.Movie[],
+  searchForMovies: Function,
+}
 
-const App = () => {
+const App = ({movies, moviesStatus, searchForMovies}: AppProps) => {
   const [searchInputText, setSearchInputText] = useState('');
-
+  // todo add onKeyDown Enter
   return (
     <div className="App">
       <SearchInput
@@ -25,13 +30,17 @@ const App = () => {
       <SearchButton
         className="search-button"
         disabled={!searchInputText}
-        onClick={() => handleClick(searchInputText)}
+        onClick={() => searchForMovies(searchInputText)}
       >
         Search
       </SearchButton>
-      <SearchResults />
+      <SearchResults movies={movies} />
     </div>
   );
 };
 
-export default App;
+export default connect(
+  _.pick(['moviesStatus', 'movies']),
+  {searchForMovies},
+)(App);
+

@@ -1,0 +1,10 @@
+export const NO_MOVIES = 'NO_MOVIES';
+export type NO_MOVIES = typeof NO_MOVIES;
+export const REQUEST_MOVIES = 'REQUEST_MOVIES';
+export type REQUEST_MOVIES = typeof REQUEST_MOVIES;
+export const SUCCESS_MOVIES = 'SUCCESS_MOVIES';
+export type SUCCESS_MOVIES = typeof SUCCESS_MOVIES;
+export const FAILURE_MOVIES = 'FAILURE_MOVIES';
+export type FAILURE_MOVIES = typeof FAILURE_MOVIES;
+
+export type MoviesStatus = NO_MOVIES | REQUEST_MOVIES | SUCCESS_MOVIES | FAILURE_MOVIES;
