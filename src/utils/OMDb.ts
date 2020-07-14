@@ -1,5 +1,5 @@
 import {Movie} from './types';
-const OMDB_API_URL = 'http://www.omdbapi.com/';
+const OMDB_API_URL = 'https://www.omdbapi.com/';
 
 // Blank posters are described by 'N/A'. Replace them with null.
 const nullifyBlankPoster = (movie: Movie): Movie => ({...movie, Poster: movie.Poster === 'N/A' ? null : movie.Poster});
