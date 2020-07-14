@@ -1,11 +1,13 @@
 import * as React from 'react';
 import {connect} from 'react-redux';
 import _ from 'lodash/fp';
+import styled from 'styled-components';
 import * as types from '../../utils/types';
 import * as reduxTypes from '../../redux/types';
 import MovieList from '../MovieList';
 
 interface SearchResultsProps {
+  className?: string,
   moviesStatus?: reduxTypes.MoviesStatus,
   movies?: types.Movie[],
   query?: string,
@@ -27,9 +29,9 @@ const renderSwitch = ({moviesStatus, movies, query}: SearchResultsProps) => {
   }
 };
 
-const SearchResults = (props: SearchResultsProps): React.ReactElement => {
+export const SearchResults = (props: SearchResultsProps): React.ReactElement => {
   return (
-    <div>
+    <div className={props.className}>
       {renderSwitch(props)}
     </div>
   );
@@ -37,4 +39,6 @@ const SearchResults = (props: SearchResultsProps): React.ReactElement => {
 
 export default connect(
   _.pick(['moviesStatus', 'movies', 'query']),
-)(SearchResults);
+)(styled(SearchResults)`
+    word-break: break-word;
+`);
