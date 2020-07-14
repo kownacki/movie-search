@@ -4,6 +4,9 @@ exports[`App renders correctly 1`] = `
 <div
   className="class-name-stub"
 >
+  <h1>
+    Movie Search
+  </h1>
   <Connect(Search) />
 </div>
 `;
