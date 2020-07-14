@@ -21,8 +21,3 @@ export const search = async (query: string): Promise<SearchResult> => {
     ? {movies: await getMoviesFromResponse(response), isSuccess: true}
     : {isSuccess: false}
 };
-
-// export const getRepos = async (username) => {
-//   const response = await fetch(`https://api.github.com/users/${username}/repos`);
-//   return response.status === 200 ? await response.json() : false;
-// };
