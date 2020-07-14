@@ -6,3 +6,8 @@ body {
   --light-grey: #F2F2F2;
   --dark-grey: #E0E0E0;
 }
+
+ul {
+  list-style: none;
+  padding: 0;
+}

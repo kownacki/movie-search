@@ -5,7 +5,7 @@ exports[`MovieCard renders correctly 1`] = `
   className="class-name-stub"
   movie={
     Object {
-      "Poster": null,
+      "Poster": "posterStub",
       "Title": "Title Stub",
       "Year": "yearStub",
       "imdbID": "id",
@@ -17,12 +17,12 @@ exports[`MovieCard renders correctly 1`] = `
   >
     <styled.img
       alt="Title Stub Poster"
-      src="moviePosterNotAvailable.jpg"
+      src="posterStub"
     >
       <img
         alt="Title Stub Poster"
         className="sc-AxjAm hVzkvE"
-        src="moviePosterNotAvailable.jpg"
+        src="posterStub"
       />
     </styled.img>
     <Styled(Component)

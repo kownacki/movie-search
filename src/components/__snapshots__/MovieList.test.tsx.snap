@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MovieList correctly renders movies 1`] = `
+<ul>
+  <li
+    key="id1"
+  >
+    <Styled(MovieCard)
+      movie={
+        Object {
+          "Poster": "posterStub",
+          "Title": "Title Stub",
+          "Year": "yearStub",
+          "imdbID": "id1",
+        }
+      }
+    />
+  </li>
+  <li
+    key="id2"
+  >
+    <Styled(MovieCard)
+      movie={
+        Object {
+          "Poster": "posterStub",
+          "Title": "Title Stub",
+          "Year": "yearStub",
+          "imdbID": "id2",
+        }
+      }
+    />
+  </li>
+  <li
+    key="id3"
+  >
+    <Styled(MovieCard)
+      movie={
+        Object {
+          "Poster": "posterStub",
+          "Title": "Title Stub",
+          "Year": "yearStub",
+          "imdbID": "id3",
+        }
+      }
+    />
+  </li>
+</ul>
+`;
+
+exports[`MovieList renders correctly when no movies 1`] = `
+<div>
+  No movies found
+</div>
+`;

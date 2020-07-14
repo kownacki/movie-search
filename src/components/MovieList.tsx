@@ -6,14 +6,24 @@ interface MovieListProps {
   movies: types.Movie[],
 }
 
-const MovieList = ({movies}: MovieListProps): React.ReactElement => {
-  return (
-    <div>
-      {!movies.length ? 'No movies found' : movies.map((movie) =>
-        <MovieCard key={movie.imdbID} movie={movie} />
-      )}
-    </div>
-  );
+const renderSwitch = ({movies}: MovieListProps) => {
+  if (movies.length) {
+    return (
+      <ul>
+        {movies.map((movie) =>
+          <li key={movie.imdbID}>
+            <MovieCard movie={movie} />
+          </li>
+        )}
+      </ul>
+    );
+  } else {
+    return <div>No movies found</div>;
+  }
+};
+
+const MovieList = (props: MovieListProps): React.ReactElement => {
+  return renderSwitch(props);
 };
 
 export default MovieList;

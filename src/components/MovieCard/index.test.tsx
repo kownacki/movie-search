@@ -1,17 +1,12 @@
 import React from 'react';
 import {mount} from 'enzyme';
 import {MovieCard} from './index';
+import * as testUtils from '../../utils/test';
 
 describe('MovieCard', () => {
   it('renders correctly', () => {
     const classNameStub = 'class-name-stub';
-    const movieStub = {
-      imdbID: 'id',
-      Poster: null,
-      Title: 'Title Stub',
-      Year: 'yearStub',
-    };
-    const search = mount(<MovieCard className={classNameStub} movie={movieStub}/>);
+    const search = mount(<MovieCard className={classNameStub} movie={testUtils.createMovieStub()}/>);
     expect(search).toMatchSnapshot();
   });
 });
