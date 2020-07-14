@@ -23,9 +23,16 @@
     "styled-components": "^5.1.1",
     "typescript": "~3.7.2"
   },
+  "devDependencies": {
+    "@types/jest": "^24.9.1",
+    "gh-pages": "^3.1.0",
+    "jest-fetch-mock": "^3.0.3",
+    "ts-jest": "^26.1.2"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test"
   },
   "browserslist": {
@@ -40,9 +47,5 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "@types/jest": "^24.9.1",
-    "jest-fetch-mock": "^3.0.3",
-    "ts-jest": "^26.1.2"
-  }
+  "homepage": "http://kownacki.github.io/movie-search"
 }
