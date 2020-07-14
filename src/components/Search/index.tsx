@@ -1,6 +1,7 @@
 import * as React from 'react';
 import {useState, useRef} from 'react';
 import _ from 'lodash/fp';
+import {MAX_INPUT_LENGTH} from '../../utils/constants';
 import {connect} from 'react-redux';
 import SearchInput from './SearchInput';
 import SearchButton from './SearchButton';
@@ -26,6 +27,7 @@ export const Search = ({moviesStatus, searchForMovies}: SearchProps): React.Reac
     <div>
       <SearchInput
         placeholder="Enter movie title"
+        maxLength={MAX_INPUT_LENGTH}
         onKeyDown={(event) => clickSearchButtonIfPressedEnter(event, searchButtonRef)}
         onChange={(event: React.ChangeEvent<HTMLInputElement>) => setSearchInputText(event.currentTarget.value)}
         type="text"

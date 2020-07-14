@@ -3,6 +3,7 @@
 exports[`Search renders correctly 1`] = `
 <div>
   <styled.input
+    maxLength={100}
     onChange={[Function]}
     onKeyDown={[Function]}
     placeholder="Enter movie title"
