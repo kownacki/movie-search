@@ -6,7 +6,7 @@ interface MovieListProps {
   movies: types.Movie[],
 }
 
-const MovieList = ({movies}: MovieListProps) => {
+const MovieList = ({movies}: MovieListProps): React.ReactElement => {
   return (
     <div>
       {!movies.length ? 'No movies found' : movies.map((movie) =>

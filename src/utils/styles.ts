@@ -9,7 +9,7 @@ export const rwdBreakpoints = {
   2: 419,
 };
 
-export const widthAndMinWidth = (width: number) => `
+export const widthAndMinWidth = (width: number): string => `
   width: ${width}px;
   min-width: ${width}px;
 `;

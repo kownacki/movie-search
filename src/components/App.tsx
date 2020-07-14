@@ -7,7 +7,7 @@ interface AppProps {
   className?: string,
 }
 
-export const App = ({className}: AppProps) => {
+export const App = ({className}: AppProps): React.ReactElement => {
   return (
     <div className={className}>
       <Search />

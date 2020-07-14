@@ -11,7 +11,7 @@ interface MovieCardProps {
   movie: types.Movie,
 }
 
-export const MovieCard = ({className, movie}: MovieCardProps) => {
+export const MovieCard = ({className, movie}: MovieCardProps): React.ReactElement => {
   return (
     <div className={className}>
       <MovieCardPosterImg src={movie.Poster || posterPlaceholder} alt={`${movie.Title} Poster`} />

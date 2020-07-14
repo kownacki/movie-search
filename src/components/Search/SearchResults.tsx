@@ -27,7 +27,7 @@ const renderSwitch = ({moviesStatus, movies, query}: SearchResultsProps) => {
   }
 };
 
-const SearchResults = (props: SearchResultsProps) => {
+const SearchResults = (props: SearchResultsProps): React.ReactElement => {
   return (
     <div>
       {renderSwitch(props)}

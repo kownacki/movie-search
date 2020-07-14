@@ -9,7 +9,7 @@ import {searchForMovies} from '../../redux/actions';
 import * as reduxTypes from '../../redux/types';
 
 interface SearchProps {
-  searchForMovies: Function,
+  searchForMovies: (query: string) => void,
   moviesStatus?: reduxTypes.MoviesStatus,
 }
 
@@ -19,7 +19,7 @@ const clickSearchButtonIfPressedEnter = (event: React.KeyboardEvent, buttonRef: 
   }
 };
 
-export const Search = ({moviesStatus, searchForMovies}: SearchProps) => {
+export const Search = ({moviesStatus, searchForMovies}: SearchProps): React.ReactElement => {
   const searchButtonRef = useRef<HTMLButtonElement>(null);
   const [searchInputText, setSearchInputText] = useState('');
   return (

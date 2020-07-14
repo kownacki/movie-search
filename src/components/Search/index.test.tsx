@@ -4,7 +4,7 @@ import {Search} from './index';
 
 describe('Search', () => {
   it('renders correctly', () => {
-    const searchForMoviesStub = () => {};
+    const searchForMoviesStub = () => {'nothing'};
     const search = shallow(<Search searchForMovies={searchForMoviesStub}/>);
     expect(search).toMatchSnapshot();
   });
