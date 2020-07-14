@@ -22,7 +22,7 @@ const MovieCardInfo = styled(({className, title, year}: MovieCardInfoProps) => {
   box-shadow: ${styles.cardBoxShadow};
   overflow: hidden;
   margin-left: 10px;
-  word-break: break-all;
+  word-break: break-word;
 
   h2 {
     font-weight: normal;
