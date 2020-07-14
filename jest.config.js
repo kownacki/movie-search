@@ -15,4 +15,5 @@ module.exports = {
     "node"
   ],
   "snapshotSerializers": ["enzyme-to-json/serializer"],
+  "coverageReporters": ["html"]
 };
