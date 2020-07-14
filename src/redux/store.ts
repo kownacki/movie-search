@@ -14,7 +14,7 @@ const initialState: StoreState  = {
   moviesStatus: types.NO_MOVIES,
 };
 
-function appReducer(state = initialState, action: AppAction): StoreState {
+export const appReducer = (state = initialState, action: AppAction): StoreState => {
   switch (action.type) {
     case types.REQUEST_MOVIES:
       return {
@@ -23,19 +23,19 @@ function appReducer(state = initialState, action: AppAction): StoreState {
       };
     case types.SUCCESS_MOVIES:
       return {
-        ...state,
         moviesStatus: types.SUCCESS_MOVIES,
         movies: action.movies,
+        query: state.query,
       };
     case types.FAILURE_MOVIES:
       return {
-        ...state,
         moviesStatus: types.FAILURE_MOVIES,
+        query: state.query,
       };
     default:
       return state;
   }
-}
+};
 
 export default createStore(
   appReducer,
