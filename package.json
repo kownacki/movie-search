@@ -56,5 +56,8 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "http://kownacki.github.io/movie-search"
+  "homepage": "http://kownacki.github.io/movie-search",
+  "jest": {
+    "snapshotSerializers": ["enzyme-to-json/serializer"]
+  }
 }

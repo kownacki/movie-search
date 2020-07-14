@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search renders correctly 1`] = `
+<div>
+  <styled.input
+    onChange={[Function]}
+    onKeyDown={[Function]}
+    placeholder="Enter movie title"
+    type="text"
+  />
+  <styled.button
+    disabled={true}
+    onClick={[Function]}
+  >
+    Search
+  </styled.button>
+  <Connect(SearchResults) />
+</div>
+`;

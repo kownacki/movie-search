@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MovieCard renders correctly 1`] = `
+<MovieCard
+  className="class-name-stub"
+  movie={
+    Object {
+      "Poster": null,
+      "Title": "Title Stub",
+      "Year": "yearStub",
+      "imdbID": "id",
+    }
+  }
+>
+  <div
+    className="class-name-stub"
+  >
+    <styled.img
+      alt="Title Stub Poster"
+      src="moviePosterNotAvailable.jpg"
+    >
+      <img
+        alt="Title Stub Poster"
+        className="sc-AxjAm hVzkvE"
+        src="moviePosterNotAvailable.jpg"
+      />
+    </styled.img>
+    <Styled(Component)
+      title="Title Stub"
+      year="yearStub"
+    >
+      <Component
+        className="sc-AxirZ gQSpdr"
+        title="Title Stub"
+        year="yearStub"
+      >
+        <div
+          className="sc-AxirZ gQSpdr"
+        >
+          <h2>
+            Title Stub
+          </h2>
+          <p>
+            Year of release: 
+            yearStub
+          </p>
+        </div>
+      </Component>
+    </Styled(Component)>
+  </div>
+</MovieCard>
+`;

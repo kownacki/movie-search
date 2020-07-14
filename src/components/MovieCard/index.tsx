@@ -11,14 +11,16 @@ interface MovieCardProps {
   movie: types.Movie,
 }
 
-const MovieCard = styled(({className, movie}: MovieCardProps) => {
+export const MovieCard = ({className, movie}: MovieCardProps) => {
   return (
     <div className={className}>
       <MovieCardPosterImg src={movie.Poster || posterPlaceholder} alt={`${movie.Title} Poster`} />
       <MovieCardInfo title={movie.Title} year={movie.Year}/>
     </div>
   );
-})`
+};
+
+export default styled(MovieCard)`
   display: flex;
   margin: 20px 0;
   @media (max-width: ${styles.rwdBreakpoints[2]}px) {
@@ -26,5 +28,3 @@ const MovieCard = styled(({className, movie}: MovieCardProps) => {
     margin-bottom: 60px;
   }
 `;
-
-export default MovieCard;

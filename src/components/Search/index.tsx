@@ -19,7 +19,7 @@ const clickSearchButtonIfPressedEnter = (event: React.KeyboardEvent, buttonRef: 
   }
 };
 
-const Search = ({moviesStatus, searchForMovies}: SearchProps) => {
+export const Search = ({moviesStatus, searchForMovies}: SearchProps) => {
   const searchButtonRef = useRef<HTMLButtonElement>(null);
   const [searchInputText, setSearchInputText] = useState('');
   return (

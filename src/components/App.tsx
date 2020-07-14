@@ -7,15 +7,16 @@ interface AppProps {
   className?: string,
 }
 
-const App = styled(({className}: AppProps) => {
+export const App = ({className}: AppProps) => {
   return (
     <div className={className}>
       <Search />
     </div>
   );
-})`
+};
+
+export default styled(App)`
   margin: auto;
   max-width: 700px;
 `;
 
-export default App;
