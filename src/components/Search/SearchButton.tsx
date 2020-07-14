@@ -7,7 +7,7 @@ const SearchButton = styled.button`
   border-radius: 4px;
   width: 100%;
   padding: 15px 0;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   text-align: center;
   text-decoration: none;
   display: inline-block;

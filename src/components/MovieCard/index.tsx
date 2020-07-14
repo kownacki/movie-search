@@ -20,7 +20,7 @@ const MovieCard = styled(({className, movie}: MovieCardProps) => {
   );
 })`
   display: flex;
-  margin-bottom: 40px;
+  margin: 20px 0;
   @media (max-width: ${styles.rwdBreakpoints[2]}px) {
     flex-direction: column;
     margin-bottom: 60px;

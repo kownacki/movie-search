@@ -1,21 +1,23 @@
 import * as React from 'react';
 import {useState} from 'react';
+import _ from 'lodash/fp';
 import {connect} from 'react-redux';
 import SearchInput from './SearchInput';
 import SearchButton from './SearchButton';
 import SearchResults from './SearchResults';
 import {searchForMovies} from '../../redux/actions';
+import * as reduxTypes from '../../redux/types';
 
 interface SearchProps {
-  className?: string;
   searchForMovies: Function,
+  moviesStatus?: reduxTypes.MoviesStatus,
 }
 
-const Search = ({className, searchForMovies}: SearchProps) => {
+const Search = ({moviesStatus, searchForMovies}: SearchProps) => {
   const [searchInputText, setSearchInputText] = useState('');
   // todo add onKeyDown Enter
   return (
-    <div className={className}>
+    <div>
       <SearchInput
         className="search-input"
         placeholder="Enter movie title"
@@ -24,7 +26,7 @@ const Search = ({className, searchForMovies}: SearchProps) => {
       />
       <SearchButton
         className="search-button"
-        disabled={!searchInputText}
+        disabled={!searchInputText || moviesStatus === reduxTypes.REQUEST_MOVIES}
         onClick={() => searchForMovies(searchInputText)}
       >
         Search
@@ -35,6 +37,6 @@ const Search = ({className, searchForMovies}: SearchProps) => {
 };
 
 export default connect(
-  null,
+  _.pick(['moviesStatus']),
   {searchForMovies},
 )(Search);

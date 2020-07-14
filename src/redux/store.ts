@@ -7,27 +7,29 @@ import {AppAction} from './actions';
 export interface StoreState {
   moviesStatus: types.MoviesStatus;
   movies?: commonTypes.Movie[];
+  query?: string,
 }
 
 const initialState: StoreState  = {
   moviesStatus: types.NO_MOVIES,
-  movies: [],
 };
 
-// SearchForMovies ???
 function appReducer(state = initialState, action: AppAction): StoreState {
   switch (action.type) {
     case types.REQUEST_MOVIES:
       return {
         moviesStatus: types.REQUEST_MOVIES,
+        query: action.query,
       };
     case types.SUCCESS_MOVIES:
       return {
+        ...state,
         moviesStatus: types.SUCCESS_MOVIES,
         movies: action.movies,
       };
     case types.FAILURE_MOVIES:
       return {
+        ...state,
         moviesStatus: types.FAILURE_MOVIES,
       };
     default:
