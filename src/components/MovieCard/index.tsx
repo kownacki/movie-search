@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import * as types from '../../types';
-import * as styles from '../../styles';
+import * as types from '../../utils/types';
+import * as styles from '../../utils/styles';
 import MovieCardPosterImg from './MovieCardPosterImg';
 import MovieCardInfo from './MovieCardInfo';
 import posterPlaceholder from '../../images/moviePosterNotAvailable.jpg';

@@ -1,6 +1,6 @@
 import {createStore, applyMiddleware} from 'redux';
 import thunkMiddleware from 'redux-thunk'
-import * as commonTypes from '../types';
+import * as commonTypes from '../utils/types';
 import * as types from './types';
 import {AppAction} from './actions';
 

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import * as styles from '../../styles';
+import * as styles from '../../utils/styles';
 
 // Standard movie poster aspect ratio is 27x40 or 0.675
 const posterWidth = 200;

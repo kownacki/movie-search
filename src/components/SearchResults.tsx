@@ -1,6 +1,6 @@
 import * as React from 'react';
 import MovieCard from './MovieCard';
-import * as types from '../types';
+import * as types from '../utils/types';
 
 interface SearchResultsProps {
   movies?: types.Movie[],

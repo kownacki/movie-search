@@ -8,7 +8,7 @@ import SearchInput from './SearchInput';
 import SearchResults from './SearchResults';
 import SearchButton from './SearchButton';
 import {searchForMovies} from '../redux/actions';
-import * as types from '../types';
+import * as types from '../utils/types';
 import * as reduxTypes from '../redux/types';
 
 interface AppProps {

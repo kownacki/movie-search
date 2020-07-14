@@ -1,9 +1,9 @@
 import {Action} from 'redux';
 import {ThunkAction} from 'redux-thunk';
 import {RootState} from './store';
-import {Movie} from '../types';
+import {Movie} from '../utils/types';
 import * as types from './types';
-import * as OMDb from '../OMDb';
+import * as OMDb from '../utils/OMDb';
 
 export interface SearchForMoviesAction {
   type: types.REQUEST_MOVIES,
