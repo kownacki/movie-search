@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {useState} from 'react';
+import {useState, useRef} from 'react';
 import _ from 'lodash/fp';
 import {connect} from 'react-redux';
 import SearchInput from './SearchInput';
@@ -13,19 +13,25 @@ interface SearchProps {
   moviesStatus?: reduxTypes.MoviesStatus,
 }
 
+const clickSearchButtonIfPressedEnter = (event: React.KeyboardEvent, buttonRef: React.RefObject<HTMLButtonElement>) => {
+  if(event.key === 'Enter') {
+    buttonRef.current?.click();
+  }
+};
+
 const Search = ({moviesStatus, searchForMovies}: SearchProps) => {
+  const searchButtonRef = useRef<HTMLButtonElement>(null);
   const [searchInputText, setSearchInputText] = useState('');
-  // todo add onKeyDown Enter
   return (
     <div>
       <SearchInput
-        className="search-input"
         placeholder="Enter movie title"
+        onKeyDown={(event) => clickSearchButtonIfPressedEnter(event, searchButtonRef)}
         onChange={(event: React.ChangeEvent<HTMLInputElement>) => setSearchInputText(event.currentTarget.value)}
         type="text"
       />
       <SearchButton
-        className="search-button"
+        ref={searchButtonRef}
         disabled={!searchInputText || moviesStatus === reduxTypes.REQUEST_MOVIES}
         onClick={() => searchForMovies(searchInputText)}
       >
