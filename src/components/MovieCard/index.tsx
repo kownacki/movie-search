@@ -1,6 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import * as types from '../../types';
+import * as styles from '../../styles';
 import MovieCardPosterImg from './MovieCardPosterImg';
 import MovieCardInfo from './MovieCardInfo';
 import posterPlaceholder from '../../images/moviePosterNotAvailable.jpg';
@@ -19,6 +20,11 @@ const MovieCard = styled(({className, movie}: MovieCardProps) => {
   );
 })`
   display: flex;
+  margin-bottom: 40px;
+  @media (max-width: ${styles.rwdBreakpoints[2]}px) {
+    flex-direction: column;
+    margin-bottom: 60px;
+  }
 `;
 
 export default MovieCard;

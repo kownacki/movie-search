@@ -4,10 +4,10 @@ const SearchButton = styled.button`
   color: white;
   background: var(--primary-color);
   border: none;
-  border-radius: 2px;
+  border-radius: 4px;
   width: 100%;
   padding: 15px 0;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
