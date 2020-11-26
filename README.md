@@ -2,9 +2,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 See live version at https://kownacki.github.io/movie-search/
 
+## Install Dependencies
+
+### `npm install`
+
 ## Available Scripts
 
-In the project directory, you can run:
+After installing dependencies you can run:
 
 ### `npm run start`
 
@@ -31,9 +35,9 @@ Run eslint linter.
 Builds the app for production to the `build` folder.<br />
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br />
+The build is minified, and the filenames include the hashes.<br />
 Your app is ready to be deployed!
 
-### `npm deploy`
+### `npm run deploy`
 
 Deploy to the address set at `homepage` field in `package.json`.
