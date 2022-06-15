@@ -1,0 +1,20 @@
+Create a movie search application that allows users to search by movie title [optionally adding the
+year of release]
+Pay attention to your application's UI/UX.
+
+Technical guidelines:
+1. Use OMDb API with an API key: 157f34ed.
+The API key supports 1000 API calls per day.
+Please use the “By Search” variant outlined here - http://www.omdbapi.com/
+For example http://www.omdbapi.com/?s=good%20luck&apikey=157f34ed
+2. Use any frontend technology you need
+3. Your code should be available thru a public Github repository
+
+Notes:
+- This exercise tests both your technical skills and product awareness.
+Features are not listed deliberately.
+- It is OK that you do not implement some of the features you thought about, but be ready to explain
+what these features are, and your implementation plan for them.
+- Estimated time for working on this task is approximately 3 hours. Out of appreciation to your time
+and effort, please contact us if you see that it takes more than that.
+Do your best and show off your great skills!
